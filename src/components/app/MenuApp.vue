@@ -1,19 +1,14 @@
 <template>
-  <div v-if="isMobile">
-    <sidebar />
-  </div>
-  <div v-else>
-    <navbar />
-  </div>
+  <navbar />
 </template>
 
 <script>
 import Navbar from '@/components/app/Navbar.vue';
-import Sidebar from '@/components/app/Sidebar.vue';
+// import Sidebar from '@/components/app/Sidebar.vue';
 
 export default {
   name: 'MenuApp',
-  components: { Navbar, Sidebar },
+  components: { Navbar },
   computed: {
     isMobile () {
       console.log(this.$vuetify.breakpoint.name.includes('xs', 'sm'))
